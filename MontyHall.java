@@ -7,7 +7,7 @@ import java.util.Scanner;
  */
 public class MontyHall
 {
-	public static void main(String[] args)
+        public static void main(String[] args)
 	{
 Random rand= new Random();
 Scanner m0nty= new Scanner(System.in);
@@ -15,6 +15,11 @@ int car= rand.nextInt(3)+1;
 System.out.println("What door is the car behind? ");
 int choice= m0nty.nextInt();
 int choice2= 1;
+while (choice<1 || choice>3)
+{
+	System.out.println("Invalid Input. Please try again: ");
+	choice=m0nty.nextInt();
+}
 if (choice>=1 && choice<=3)
 		{
 if(choice==car)
